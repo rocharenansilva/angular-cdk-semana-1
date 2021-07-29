@@ -3,10 +3,18 @@ import { BrowserModule } from '@angular/platform-browser';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
+import { SelectionComponent } from './selection/selection.component';
+import { SelectionDetailsComponent } from './selection-details/selection-details.component';
+import { AnnounceComponent } from './announce/announce.component';
+import { AnnouncerComponent } from './announcer/announcer.component';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    SelectionComponent,
+    SelectionDetailsComponent,
+    AnnounceComponent,
+    AnnouncerComponent
   ],
   imports: [
     BrowserModule,

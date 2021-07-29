@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-root',
@@ -7,4 +8,22 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'cdk-announce-selection';
+
+  constructor(private router: Router) {}
+
+  goToHome(): void {
+    this.router.navigate(['/']);
+  }
+
+  goToSelection(): void {
+    this.router.navigate(['/selection']);
+  }
+
+  goToSelectionDetails(): void {
+    this.router.navigate(['/selection-details']);
+  }
+
+  goToLiveAnnounce(): void {
+    this.router.navigate(['/announce']);
+  }
 }

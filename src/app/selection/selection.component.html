@@ -1,0 +1,31 @@
+<h2 class="mt-5 mb-5">Testando a seleção de dados</h2>
+
+<!-- <ng-container *ngFor="let item of items; let i = index">
+  <div class="form-check">
+    <input class="form-check-input" name="flexRadioDefault" id="flexRadioDefault{{ i }}"
+      [type]="multipleSelection ? 'checkbox' : 'radio'"
+      [checked]="isSelected(item)"
+      (click)="toggleSelection(item, inputSelecion.checked)"
+      #inputSelecion
+    >
+    <label class="form-check-label" for="flexRadioDefault{{ i }}">
+      <img class="label-image" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+      {{ item.name }}
+    </label>
+  </div>
+</ng-container> -->
+
+<ng-container *ngFor="let item of items; let i = index">
+  <div class="form-check">
+    <input class="form-check-input" name="flexRadioDefault" id="flexRadioDefault{{ i }}"
+      [type]="multipleSelection ? 'checkbox' : 'radio'"
+      [checked]="dadosSelecionadosModel.isSelected(item)"
+      (click)="dadosSelecionadosModel.toggle(item)"
+      #inputSelecion
+    >
+    <label class="form-check-label" for="flexRadioDefault{{ i }}">
+      <img class="label-image" [ngStyle]="{'background-image': 'url(' + item.image + ')'}">
+      {{ item.name }}
+    </label>
+  </div>
+</ng-container>

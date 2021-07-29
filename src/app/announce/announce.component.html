@@ -1,0 +1,5 @@
+<h2 class="mt-5 mb-5">Testando o live announce para o leitor de tela</h2>
+<app-announcer [message]="message" [showAlert]="announceToggle"></app-announcer>
+
+<button type="button" class="btn btn-secondary mr-2" (click)="announceToggle = !announceToggle">Toggle Announcer</button>
+<button type="button" class="btn btn-secondary mr-2" (click)="announce()">Toggle Announcer</button>
